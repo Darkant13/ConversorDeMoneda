@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Darkant
- *
- */
-module ConvertidorMoneda {
-}
