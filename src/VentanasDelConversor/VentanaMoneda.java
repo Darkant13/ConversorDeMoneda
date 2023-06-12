@@ -20,13 +20,15 @@ public class VentanaMoneda {
 				
 				}
 			if (ventanaMoneda == 1) {
+				
 				VentanaDivisaAPeso ventanaDivisaAPeso = new VentanaDivisaAPeso();
 				ventanaDivisaAPeso.DivisaPeso();
 				}
 			if (ventanaMoneda == 0) {
-				//PesoADivisa();
+				
 				VentanaPesoADivisa ventanaPesoADivisa = new VentanaPesoADivisa();
 				ventanaPesoADivisa.PesoDivisa();
+				
 			}
 			else {
 				cancelar = true;

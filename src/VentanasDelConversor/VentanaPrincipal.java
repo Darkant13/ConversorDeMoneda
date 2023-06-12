@@ -4,8 +4,10 @@ import javax.swing.JOptionPane;
 
 public class VentanaPrincipal {
 
+	
 	public static void main(String[] args) {
 		
+			
 			String[] opcionesPrincipales = { "Conversor de Monedas", "Conversor de peso","Conversor de Temperatura"};
 
 			boolean cancelar = false;
@@ -16,6 +18,7 @@ public class VentanaPrincipal {
 				if (ventanaPrincipal != null) {
 					switch (ventanaPrincipal) {
 					case "Conversor de Monedas":
+						
 						VentanaMoneda ventanaMoneda = new VentanaMoneda();
 						ventanaMoneda.PreguntaDivisa();
 						break;
