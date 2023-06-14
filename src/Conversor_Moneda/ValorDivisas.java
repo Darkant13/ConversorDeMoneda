@@ -4,15 +4,17 @@ import java.util.ArrayList;
 
 public class ValorDivisas {
 	
-	public void main(String[] args) {
-		 
+	Double PosicionPeso;
+	String PosicionDivisa;
+	
+	public ValorDivisas(int opcion) {
+		
 	        ArrayList<String> Divisas = new ArrayList<>();
-	        Divisas.add("Dolar");
+	        Divisas.add("Dolares");
 	        Divisas.add(1, "Euro");
-	        Divisas.add(2, "Libre Esterlina");
-	        Divisas.add(3, "Yen Japones");
-	        Divisas.add(4, "Won Sul-Coreano");
-	        System.out.println(Divisas);
+	        Divisas.add(2, "Libras Esterlinas");
+	        Divisas.add(3, "Yenes Japones");
+	        Divisas.add(4, "Wons Sul-Coreano");
 	        
 	        ArrayList<Double> Peso = new ArrayList<>();
 	        Peso.add(4171.57);
@@ -20,10 +22,25 @@ public class ValorDivisas {
 	        Peso.add(2, 5243.87);
 	        Peso.add(3, 29.93);
 	        Peso.add(4, 3.24);
-	        System.out.println(Peso);
-	 }
+	        
+	        
+	        PosicionDivisa = Divisas.get(opcion);
+	        System.out.println("Valor Divisa:" + PosicionDivisa);
+	        PosicionPeso = Peso.get(opcion);
+	        System.out.println("Valor Divisa:" + PosicionPeso);
+	        
+			}
 	
-	double Dolar = 4171.57;
+		public Double getPosicionPeso() {
+			return PosicionPeso;
+		}
+		
+		public String getPosicionDivisa() {
+			return PosicionDivisa;
+		}
+	}
+
+	/*double Dolar = 4171.57;
 	double Euro = 4488.40;
 	double LibraEsterlina = 5243.87;
 	double yen = 29.93;
@@ -43,6 +60,6 @@ public class ValorDivisas {
 	}
 	public double getWon() {
 		return this.Won;
-	}
+	}*/
 	
-}
+

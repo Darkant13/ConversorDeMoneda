@@ -1,32 +1,39 @@
 package Conversor_Moneda;
 
-import VentanasDelConversor.VentanaDivisaAPeso;
+import java.text.DecimalFormat;
 
-public class OperacionDivisas{
+import javax.swing.JOptionPane;
+
+public class OperacionDivisas {
 	
-	int Opcion;
-	double Valor;
-	
-	public OperacionDivisas(int opcion, String valor) {
-		Opcion = opcion;
-		Valor = Double.parseDouble(valor);
+	public void Operacion(Double valor, int opcion, int i) {
+		
+		ValorDivisas valorDivisas = new ValorDivisas(opcion);
+		Double Peso = valorDivisas.getPosicionPeso();	
+		String Divisa = valorDivisas.getPosicionDivisa();
+		DecimalFormat Decimal = new DecimalFormat("#.##");
+		
+		if (i == 0) {
+			
+			Double Resultado = valor / Peso;
+			System.out.println(Resultado);
+			JOptionPane.showMessageDialog(null,
+	                 valor + " Pesos Colombianos Son : " + Decimal.format(Resultado) + " " + Divisa);
+		}
+		if(i == 1) {
+			
+			
+			Double Resultado = Peso * valor;
+			
+			System.out.println(Resultado);
+			JOptionPane.showMessageDialog(null,
+	                 valor + " " + Divisa + " Son $ " + Decimal.format(Resultado) + " Pesos Colombianos");
+		}
+
+		
 		
 	}
 
-	public void Operacion() {
-		
-		ValorDivisas valorDivisas = new ValorDivisas();
-		double Peso = valorDivisas.getDolar();
-		System.out.println(Peso);
-		
-		VentanaDivisaAPeso valorUsuario = new VentanaDivisaAPeso();
-		int Op = valorUsuario.getOpcion();
-		double Resultado = Peso * Valor;
-		
-		System.out.println(Resultado);
-				
-		  
-		
-	}
+	
 
 }
